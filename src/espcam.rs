@@ -289,7 +289,7 @@ impl<'a> Camera<'a> {
         Ok(Self { _p: PhantomData })
     }
 
-    pub fn get_framebuffer(&self) -> Option<FrameBuffer> {
+    pub fn get_framebuffer(&self) -> Option<FrameBuffer<'_>> {
         let fb = unsafe { camera::esp_camera_fb_get() };
         if fb.is_null() {
             //unsafe { camera::esp_camera_fb_return(fb); }

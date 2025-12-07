@@ -51,6 +51,10 @@ component_dirs = "components/esp32-camera"
 bindings_header = "components/bindings.h"
 bindings_module = "camera"
 
+[patch.crates-io]
+esp-idf-svc = { path = "patches/esp-idf-svc" }
+esp32-nimble = { path = "patches/esp32-nimble" }
+
 
 [build-dependencies]
 embuild = "0.32"
